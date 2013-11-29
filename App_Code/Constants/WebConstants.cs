@@ -9,7 +9,7 @@ using System.Web;
 public static class WebConstants
 {
     //public const string ConsumerSecret = "4806514479539779073"; // Suyati Dev Box
-    public const string ConsumerSecret = "4571123652733616037";   // Partner Dev Box
+    public const string ConsumerSecret = "6393748103986089841";   // Partner Dev Box
 
     public const string StartPage = "~/Default.aspx";
     public const string TwitterAuthStartPage = "/OAuth/TwitterOAuthPage.aspx";
