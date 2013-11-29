@@ -11,15 +11,15 @@ public partial class _Default : System.Web.UI.Page
     {
         bool IsCanvasContext = false;
         SignedAuthentication auth = new SignedAuthentication();
-        if (Request.Params["signed_request"] != null)
+        if (Request.Params[WebConstants.SignedRequestParam] != null)
         {
-            IsCanvasContext = auth.IsAuthenticatedCanvasUser(Request.Params["signed_request"]);
+            IsCanvasContext = auth.IsAuthenticatedCanvasUser(Request.Params[WebConstants.SignedRequestParam]);
         }
 
         if (IsCanvasContext)
         {
             //Proper Canvas Context
-            RootObject contextObj = auth.GetCanvasContextData(Request.Params["signed_request"]);
+            RootObject contextObj = auth.GetCanvasContextData(Request.Params[WebConstants.SignedRequestParam]);
             lbl_Greet.Text = "Canvas Context User : " + contextObj.context.user.fullName;
             
         }
